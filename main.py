@@ -1,5 +1,6 @@
 import asyncio
 import logging
+import os
 from datetime import datetime, timedelta
 
 from aiogram import Bot, Dispatcher
@@ -8,7 +9,7 @@ from aiogram.enums import ParseMode
 from aiogram.filters import Command
 from aiogram.types import Message, ReplyKeyboardMarkup, KeyboardButton, ReplyKeyboardRemove
 
-TOKEN = "8814020140:AAFzbm_HBgIkROX14pszw-mVehm3dsX3obc"
+TOKEN = os.getenv("BOT_TOKEN")
 
 bot = Bot(
     token=TOKEN,
